@@ -1,3 +1,4 @@
+# goes in /etc/vim/
 noremap d h
 noremap h j
 noremap t k
