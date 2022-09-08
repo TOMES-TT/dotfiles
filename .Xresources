@@ -1,0 +1,62 @@
+! ! Remember to do xrdb -merge ~/.Xresources / xrm  when you exit this to make the changes go through
+URxvt.scrollBar:	false
+URxvt.foreground:	White
+URxvt.internalBorder:	15
+! URxvt.font: 9x15
+! ^ uncomment if the font breaks
+URxvt.font: xft:TerminessTTF Nerd Font Mono:style=medium:size=16
+!	fonts in this line should be expressed as the return of fc-list; specifically the part after the filename and the colon; additionally, make
+!	sure to use the :style argument and not "FontName-Regular," otherwise you will once again spend 20 minutes flailing around trying to 
+!	figure out why your terminal looks like shit
+URxvt.letterSpace: 1
+
+urxvt*background: rgba:0000/0000/0200/c800
+
+Xft*antialias:	true
+
+! special
+*.foreground:   #bebaad
+*.background:   #1d1c20
+*.cursorColor:  #bebaad
+
+! black
+*.color0:       #1d1c20
+*.color8:       #858279
+
+! red
+*.color1:       #5a5857
+*.color9:       #5a5857
+
+! green
+*.color2:       #7c6262
+*.color10:      #7c6262
+
+! yellow
+*.color3:       #767f6a
+*.color11:      #767f6a
+
+! blue
+*.color4:       #717159
+*.color12:      #717159
+
+! magenta
+*.color5:       #725c65
+*.color13:      #725c65
+
+! cyan
+*.color6:       #84786f
+*.color14:      #84786f
+
+! white
+*.color7:       #bebaad
+
+
+!! navigation keybinds
+! Shift + Up: scroll one line higher
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+! Shift + Down: scroll one line lower
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+! Ctrl + Left: jump to the previous word
+URxvt.keysym.Control-Left: \033[1;5D
+! Ctrl + Right: jump to the next word
+URxvt.keysym.Control-Right: \033[1;5C 
