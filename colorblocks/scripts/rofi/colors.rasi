@@ -1,0 +1,21 @@
+// remember you can make comments like this too
+/* colors */
+
+* {
+  /* list view background */
+  al:	#0E0E09FF;
+  /* list view highlight */
+  bg:	#BB4711FF;
+  /* search icon background */
+  bg1:	#D69D2EFF;
+  /* search field */
+  bg2:	#E4B452FF;
+  /* search field end */ 
+  bg3:	#D9BC64FF;
+  /* border color? */
+  bg4:	#76875FFF;
+  /* highlighted text color */
+  bg5:	#0E0E09FF; 
+  /* text color */
+  fg:	#A79E89FF;
+}
