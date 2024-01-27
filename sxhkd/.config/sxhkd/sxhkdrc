@@ -70,6 +70,10 @@ super + ctrl + {m,v,x,y,z}
 # unhide all hidden windows
 super + u 
 	bspc node any.hidden.local -g hidden
+
+# hide the focused node, and swap it with the most recently hidden node on the same desktop
+super + l
+	bspc node any.hidden.local -g hidden=off && bspc node -g hidden
 	
 
 #
