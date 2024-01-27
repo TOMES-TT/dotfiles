@@ -1,0 +1,37 @@
+/**
+ * @name YourTheme
+ * @author YourName
+ * @description Describe the aesthetic. Maybe a support server link.
+ * @version 0.0.1
+ */
+
+:root {
+  --font-primary: 'BigBlueTermPlus Nerd Font';
+  --font-display: 'BigBlueTermPlus Nerd Font';
+  --font-headline: 'BigBlueTermPlus Nerd Font';
+  --font-code: 'BigBlueTermPlus Nerd Font';
+  --font-size: 20%
+
+  --background-accent: #1D1B19;
+  --background-floating: #1D1B19;
+  --background-primary: #43403B;
+  --background-secondary: #282623;
+  --background-tertiary: #1D1B19;
+  --bg-backdrop: #1D1B19;
+  --bg-backdrop-no-opacity: #1D1B19;
+  --bg-base-primary: #1D1B19;
+  --bg-base-secondary: #1D1B19;
+  --bg-base-tertiary: #1D1B19;
+  --bg-mod-faint: #1D1B19;
+  --bg-mod-strong: #1D1B19;
+  --bg-mod-subtle: #1D1B19;
+  --bg-overlay-1: #282623;
+  --bg-overlay-2: #282623;
+  --bg-overlay-3: #1D1B19;
+  --bg-surface-overlay: #1D1B19;
+  --bg-surface-overlay-tmp: #1D1B19;
+  --bg-surface-raised: #1D1B19;
+  --black: #1D1B19;
+
+  --text-link: #C76E42;
+}

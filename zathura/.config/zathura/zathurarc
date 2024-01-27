@@ -1,0 +1,19 @@
+map [normal] d scroll left
+map [normal] h scroll down
+map [normal] t scroll up
+map [normal] n scroll right
+map [normal] H navigate next
+map [normal] T navigate previous
+map [normal] D scroll page-top
+map [normal] N scroll page-bottom
+map [normal] l search forward
+map [normal] L search backward
+map [normal] j toggle_page_mode
+map [fullscreen] H navigate next
+map [fullscreen] T navigate previous
+map [index] h navigate_index down
+map [index] t navigate_index up
+map [index] d navigate_index collapse
+map [index] D navigate_index collapse-all
+map [index] n navigate_index expand
+map [index] N navigate_index expand-all
