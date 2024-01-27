@@ -10,7 +10,6 @@
   --font-display: 'BigBlueTermPlus Nerd Font';
   --font-headline: 'BigBlueTermPlus Nerd Font';
   --font-code: 'BigBlueTermPlus Nerd Font';
-  --font-size: 20%
 
   --background-accent: #1D1B19;
   --background-floating: #1D1B19;
@@ -34,4 +33,4 @@
   --black: #1D1B19;
 
   --text-link: #C76E42;
-}
+  } 
