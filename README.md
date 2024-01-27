@@ -6,8 +6,6 @@ The idea here is pretty standard; get everything using the same font and the sam
 
 The color scheme is a variation on [raild](https://github.com/dkeg/crayolo/blob/master/colors/raild) by [dkeg](https://github.com/dkeg/); I've moved it to 16 colors and increased the contrast for greater usability. Maybe I made it better, maybe I mucked it up. Up to you to decide.
 
-The color scheme is set using 
-
 # Applications I use
 
 - [alacritty](https://github.com/baskerville/bspwm): feature-rich terminal emulator
