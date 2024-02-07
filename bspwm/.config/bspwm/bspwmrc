@@ -34,10 +34,9 @@ bspc config borderless_monocle      false
 bspc config gapless_monocle         false
 bspc config focus_follows_pointer   true
 
-bspc rule -a Steam desktop="^4"
-bspc rule -a --one-shot KeePassXC desktop="^5"
+bspc rule -a steam desktop="^4"
 bspc rule -a discord desktop="^6"
 
 # start programs
 fish $HOME/scripts/polybar-multimon.fish
-keepassxc &
+bspc rule -a --one-shot keepassxc desktop="^5" && keepassxc &
