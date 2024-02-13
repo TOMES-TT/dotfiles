@@ -13,4 +13,5 @@ if status is-interactive
     alias fcf="helix ~/.config/fish/config.fish"
     alias xn="helix ~/.xinitrc"
     alias ra="ranger"
+    alias pbc="he ~/.config/polybar/config.ini"
 end

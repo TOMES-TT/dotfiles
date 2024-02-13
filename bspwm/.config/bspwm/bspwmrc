@@ -6,6 +6,10 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 fish $HOME/scripts/random-wp.fish
 
+fish $HOME/scripts/polybar-multimon.fish
+
+bspc rule -a --one-shot keepassxc desktop="^5" && keepassxc &
+
 # script to set wm colors using pywal
 
 # source the colors.
@@ -36,7 +40,3 @@ bspc config focus_follows_pointer   true
 
 bspc rule -a steam desktop="^4"
 bspc rule -a discord desktop="^6"
-
-# start programs
-fish $HOME/scripts/polybar-multimon.fish
-bspc rule -a --one-shot keepassxc desktop="^5" && keepassxc &
