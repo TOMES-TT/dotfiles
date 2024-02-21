@@ -32,5 +32,5 @@ if status is-interactive
     alias ala="he ~/.config/alacritty/alacritty.toml"
 
     #git management
-    alias github="cd $HOME/dotfiles/; stow */ ; git add ./* ; git commit"
+    alias github="cd $HOME/dotfiles/; stow */ ; git add ./* ; git commit; git push"
 end
