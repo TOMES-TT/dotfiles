@@ -51,6 +51,10 @@ j = "delete_selection"
 J = "workspace_diagnostics_picker"
 k = "find_till_char"
 K = "till_prev_char"
+"C-c" = "normal_mode"
+l = "search_next"
+L = "search_prev"
 
 [keys.insert]
 "C-c" = "normal_mode"
+# "C-Backspace" = "delete_word_backward"

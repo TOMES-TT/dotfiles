@@ -19,6 +19,7 @@ if status is-interactive
 
     #commands
     alias he="helix"
+    alias nc="mpc update && ncmpcpp"
 
     # config files
     alias bs="helix ~/.config/bspwm/bspwmrc"
@@ -28,7 +29,8 @@ if status is-interactive
     alias xn="helix ~/.xinitrc"
     alias rn="ranger"
     alias pbc="he ~/.config/polybar/config.ini"
+    alias ala="he ~/.config/alacritty/alacritty.toml"
 
     #git management
-    alias github="stow $HOME/dotfiles/*/ && git add $HOME/dotfiles/* && git commit"
+    alias github="cd $HOME/dotfiles/; stow */ ; git add ./* ; git commit"
 end

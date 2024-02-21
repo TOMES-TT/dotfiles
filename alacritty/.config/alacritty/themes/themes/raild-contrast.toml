@@ -1,22 +1,5 @@
-shell = "/usr/bin/fish"
-
-[window]
-padding = { x = 10, y = 10}
-
-[font]
-normal = { family = "BigBlueTermPlus Nerd Font Mono", style = "Regular" }
-bold = { family = "BigBlueTermPlus Nerd Font Mono", style = "Bold" }
-italic = { family = "BigBlueTermPlus Nerd Font Mono", style = "Italic" }
-bold_italic = { family = "BigBlueTermPlus Nerd Font Mono", style = "Bold Italic" }
-size = 10
-
-[cursor]
-style = {shape = "Block",blinking = "On"}
-blink_interval = 1000
-blink_timeout = 0
-
-[mouse]
-hide_when_typing = true
+# Based on "raild" by dkeg
+# https://github.com/dkeg/crayolo
 
 # Default colors
 [colors.primary]
@@ -29,7 +12,7 @@ bright_foreground = '#dbdace'
 # Cursor colors
 [colors.cursor]
 text   = '#dbdace'
-cursor = '#c76e42'
+cursor = '#d9d9d9'
 
 # Normal colors
 [colors.normal]
