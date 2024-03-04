@@ -1,5 +1,6 @@
 @import "~/.cache/wal/colors-rofi-dark"
 configuration {
+monitor: -1;
 /*	modes: "window,drun,run,ssh";*/
 /*	font: "mono 12";*/
 /*	location: 0;*/

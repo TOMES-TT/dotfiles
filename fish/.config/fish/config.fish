@@ -20,6 +20,7 @@ if status is-interactive
     #commands
     alias he="helix"
     alias nc="mpc update && ncmpcpp"
+    alias neo="neo -C $HOME/.config/neo/colors"
 
     # config files
     alias bs="helix ~/.config/bspwm/bspwmrc"

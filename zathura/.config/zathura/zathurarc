@@ -17,3 +17,40 @@ map [index] d navigate_index collapse
 map [index] D navigate_index collapse-all
 map [index] n navigate_index expand
 map [index] N navigate_index expand-all
+
+# set colors
+
+set completion-bg "#1d1b19"
+set completion-fg "#dbdace"
+set completion-group-bg "#1d1b19"
+set completion-group-fg "#66604d"
+set completion-highlight-bg "#dbdace"
+set completion-highlight-fg "#1d1b19"
+
+set recolor-lightcolor "#1d1b19"
+set recolor-darkcolor "#dbdace"
+set default-bg "#1d1b19"
+
+set inputbar-bg "#1d1b19"
+set inputbar-fg "#dbdace"
+set notification-bg "#1d1b19"
+set notification-fg "#dbdace"
+set notification-error-bg "#935334"
+set notification-error-fg "#dbdace"
+set notification-warning-bg "#935334"
+set notification-warning-fg "#dbdace"
+set statusbar-bg "#1d1b19"
+set statusbar-fg "#dbdace"
+set index-bg "#1d1b19"
+set index-fg "#dbdace"
+set index-active-bg "#dbdace"
+set index-active-fg "#1d1b19"
+set render-loading-bg "#1d1b19"
+set render-loading-fg "#dbdace"
+
+set window-title-home-tilde true
+set statusbar-basename true
+set selection-clipboard clipboard
+
+[zathura]
+selection-clipboard clipboard

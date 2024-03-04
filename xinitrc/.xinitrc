@@ -42,7 +42,7 @@ fi
 syncthing &
 # wal -R &
 mullvad connect &
-unclutter --timeout 10 &
+unclutter &
 
 # Set up monitor orientation and refresh rate
 xrandr --output DP-3 --primary --mode 2560x1440 --pos 0x0 --output DP-2 --mode 1600x900 --pos 2560x312 &
