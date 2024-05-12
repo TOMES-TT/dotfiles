@@ -35,6 +35,10 @@ super + shift + o; r
 super + shift + s;{s,k}
 	{bookreport --clipboard,killall -q espeak}
 
+# toggle the keymap between dvorak and colemak
+super + alt + @space
+	setxkbmap -query | grep -q 'dvorak' && setxkbmap -variant colemak || setxkbmap -variant dvorak
+
 #
 # bspwm hotkeys
 #
@@ -155,5 +159,5 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # rotate currently selected node
-super + ctrl + {r,shift+r
+super + ctrl + {r,shift+r}
 	bspc node -R {90,-90}

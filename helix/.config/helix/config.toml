@@ -8,6 +8,8 @@ select = "underline"
 [editor.soft-wrap]
 enable = true
 
+[editor.statusline]
+right = ["diagnostics", "selections", "register", "position", "primary-selection-length", "file-encoding"]
 [keys.normal]
 d = "move_char_left"
 D = "swap_view_left"

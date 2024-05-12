@@ -1,23 +1,7 @@
 #!/usr/bin/env fish
 
 # take arguments "--help" and "--clipboard"
-
-set -l options 'h/help' 'c/clipboard'
-argparse -s $options -- $argv
-or return
-
-# if --clipboard was passed
-
-if set -ql _flag_c
-    set -l clipboard (string match -r text (string join (xclip -o -t TARGETS))) # make sure the clipboard is text
-    if test -n $clipboard
-        xclip -selection -clipboard -o -t TEXT | espeak -s --stdin # if it is, speak it with espeak
-        exit 0
-    else
-        echo "selection isn't text!" | espeak -s --stdin # if it isn't, complain about it
-        exit 1
-    end
-else if set -ql _flag_h
+function help
     echo "Usage: bookreport [OPTIONS]... [FILENAME]... 
 Turn text into speech using espeak.
 -h --help	print this help and exit
@@ -28,13 +12,50 @@ by one to edit, then have espeak turn their contents into a .wav file.
 
 Examples:
 
-espeak file1 file2 file3	opens the text editor editing each file in turn, lets you paste in text,
-then passes the completed file to espeak to create a .wav with the same name."
-else if test -n $argv
+espeak file1 file2 file3	opens the text editor editing each file in turn, lets you paste in text, then passes the completed file to espeak to create a .wav with the same name."
+end
+
+set -l options h/help c/clipboard
+argparse -s $options -- $argv
+# or return
+# if --clipboard was passed
+
+if set -ql _flag_h
+    help
+
+else if set -ql _flag_c
+    set -l clipboard (string match -r text (string join (xclip -o -t TARGETS))) # make sure the clipboard is text
+    if test -n $clipboard # this needs to be changed
+        xclip -selection -clipboard -o -t TEXT | espeak -s --stdin # if it is, speak it with espeak
+        exit 0
+    else
+        echo "selection isn't text!" | espeak -s --stdin # if it isn't, complain about it
+        exit 1
+    end
+
+else if test (count $argv) -gt 0
     for i in $argv
         $EDITOR ./$i.txt
         espeak -f $i.txt -w $i.wav -s 150
     end
+
 else
-    echo "you need to pass something"
+    help
 end
+
+# else if (string join -q $argv) 
+#     echo "$argv"
+#     echo "test"
+#     exit 0
+# # else
+#     echo "nothing was passed"
+#     exit 1
+# end
+# else if test -na $argv
+#     for i in $argv
+#         $EDITOR ./$i.txt
+#         espeak -f $i.txt -w $i.wav -s 150
+#     end
+# else
+#     echo "you need to pass something"
+# end

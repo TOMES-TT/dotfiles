@@ -46,6 +46,7 @@ unclutter &
 
 # Set up compose key
 setxkbmap -option compose:menu
+setxkbmap -option ctrl:swapcaps
 
 # Set up monitor orientation and refresh rate
 xrandr --newmode "1600x900-60.00"  118.25  1600 1696 1856 2112  900 903 908 934 -hsync +vsync
