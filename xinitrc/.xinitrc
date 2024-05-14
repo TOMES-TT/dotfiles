@@ -44,7 +44,11 @@ syncthing &
 mullvad connect &
 unclutter &
 
-# Set up compose key
+# Set up keyboard layouts and toggle option
+
+setxkbmap -layout us,us -variant dvorak,colemak -option grp:alt_shift_toggle
+
+# Set up xkb options
 setxkbmap -option compose:menu
 setxkbmap -option ctrl:swapcaps
 
