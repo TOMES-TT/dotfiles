@@ -4,8 +4,7 @@ These are my dotfiles for Arch Linux. Any programs without configuration files i
 
 The idea here is pretty standard; get everything using the same font and the same color scheme, and do everything you can on the terminal, while maintaining a good workflow.
 
-The color scheme is a variation on [raild](https://github.com/dkeg/crayolo/blob/master/colors/raild) by [dkeg](https://github.com/dkeg/); I've moved it to 16 colors and increased the contrast for greater usability. Maybe I made it better, maybe I mucked it up. Up to you to decide.
-
+currently, I'm using pywal to set my terminal color scheme based on my background. This works well enough, though you may find it limiting. It's fairly straightforward to use pywal to set colors using your own theme if you want to go that route.
 # Applications I use
 
 - [alacritty](https://github.com/baskerville/bspwm): feature-rich terminal emulator
