@@ -72,9 +72,9 @@ G   		goto-end
 ?   		back-search
 \e/ 		forw-search *
 \e? 		back-search *
-n   		repeat-search
+l   		repeat-search
 \en 		repeat-search-all
-N   		reverse-search
+L   		reverse-search
 \eN 		reverse-search-all
 &   		filter
 m   		set-mark

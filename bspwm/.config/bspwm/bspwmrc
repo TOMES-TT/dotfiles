@@ -4,13 +4,17 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-fish $HOME/scripts/random-wp.fish &
+# fish $HOME/scripts/random-wp.fish &
 
 fish $HOME/scripts/polybar-multimon.fish &
 
 bspc rule -a KeePassXC --one-shot desktop=^5 && keepassxc &
 
-# script to set wm colors using pywal
+wal -R &
+
+picom &
+
+# set wm colors using pywal
 
 # source the colors.
 . "${HOME}/.cache/wal/colors.sh"
@@ -42,3 +46,4 @@ bspc config pointer_follows_monitor	true
 bspc rule -a steam desktop="^4"
 bspc rule -a discord desktop="^6"
 bspc rule -a "RuneLite Launcher" state=floating
+bspc rule -a "Spotify" desktop="^9"

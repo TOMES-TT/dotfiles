@@ -1,0 +1,70 @@
+(defcfg)
+;; aliases
+(defalias 
+  util (layer-while-held utility)
+  hnm (layer-while-held numpad)
+)
+(defalias 
+  ctsp (tap-hold 200 150 spc lctl)
+  gru (tap-hold 200 200 grv @util)
+  12ut (tap-hold 200 200 f12 @util)
+  f9n (tap-hold 200 200 f9 @hnm)
+  f1n (tap-hold 200 200 f1 @hnm)
+  dvk (layer-switch dvorak)
+  qwe (layer-switch qwerty)
+  num (layer-switch numpad)
+)
+;; Define current keyboard layout (currently US qwerty TKL)
+(defsrc
+  esc f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 prtsc slck brk
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc 	ins home pgup
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \ 		del end pgdn
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret  
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft					 up
+  lctl lmet lalt           spc            ralt comp rctl					left down right
+)
+
+(deflayer dvorak
+  esc  @f1n f2   f3   f4   f5   f6   f7   f8   @f9n f10  f11  @12ut         prtsc   slck   brk
+  @gru 1    2    3    4    5    6    7    8    9    0    [    ]    bspc 	ins home pgup
+  tab  '    ,    .    p    y    f    g    c    r    l    /    =    \ 		del end pgdn
+  lctl a    o    e    u    i    d    h    t    n    s    -    ret  
+  lsft ;    q    j    k    x    b    m    w    v    z    rsft					 up
+  caps lmet lalt           spc            ralt comp @ctsp					left down right
+)
+
+(deflayer qwerty
+  esc f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 prtsc slck brk
+  @gru 1    2    3    4    5    6    7    8    9    0    -    =    bspc 	ins home pgup
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \ 		del end pgdn
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret  
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft					 up
+  lctl lmet lalt           spc            ralt comp rctl					left down right
+)
+
+(deflayer blank-template
+  _    _    _    _    _    _    _    _    _    _    _    _    _             _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    	_    _    _   
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _ 		_   _   _   
+  _    _    _    _    _    _    _    _    _    _    _    _    _    
+  _    _    _    _    _    _    _    _    _    _    _    _   					 _ 
+  _    _    _              _              _    _    _    					_    _    _    
+)
+
+(deflayer utility
+  _    lrld @dvk @qwe _    _    _    _    _    _    _    @num _             _   _   _
+  _    @num _    _    _    _    _    _    _    _    _    _    _    _    	_   _   _   
+  _    _    _    _    _    _    _    home _    _    _    _    _    _ 		_   _   _   
+  _    _    _    _    _    _    _    end  _    _    _    _    _    
+  _    _    _    _    _    _    _    _    _    _    _    _   					 _ 
+  _    _    _              _              _    _    _    					_    _    _    
+)
+
+(deflayer numpad
+  _    @dvk _    _    _    _    _    _    _    _    _    _    _             @dvk _    _ 
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    	_   _   _   
+  _    _    7    8    9    _    _    9    8    7    _    _    _    _ 		_   _   _   
+  _    _    4    5    6    _    _    6    5    4    _    _    _    
+  _    _    1    2    3    _    _    3    2    1    _    _   					 _ 
+  _    _    _              0              _    _    _    					_    _    _    
+)

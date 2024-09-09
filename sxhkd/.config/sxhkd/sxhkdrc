@@ -14,9 +14,9 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# launch ranger
+# launch lf
 super + r
-	alacritty -e ranger
+	alacritty -e lf
 
 # launch browser
 super + alt + b

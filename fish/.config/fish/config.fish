@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 
     # get colors from the current pywal colorscheme
-    cat ~/.cache/wal/sequences &
+    source ~/.cache/wal/colors.fish
 
     #
     # aliases
@@ -15,12 +15,17 @@ if status is-interactive
     alias ra="ls -R"
 
     # rm
-    alias rm="trash"
+    alias tr="trash"
 
-    #commands
+    # commands
     alias he="helix"
     alias nc="mpc update && ncmpcpp"
     alias neo="neo -C $HOME/.config/neo/colors"
+
+    # vpn control
+    alias mvd="mullvad disconnect"
+    alias mvc="mullvad connect"
+    alias mvs="mullvad status"
 
     # config files
     alias bs="helix ~/.config/bspwm/bspwmrc"
@@ -34,4 +39,6 @@ if status is-interactive
 
     #git management
     alias github="cd $HOME/dotfiles/; stow */ ; git add ./* ; git commit; git push"
+
+    alias ct="setxkbmap -layout us -variant dvorak -option compose:menu ctrl:swapcaps"
 end

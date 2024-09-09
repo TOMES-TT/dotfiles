@@ -41,21 +41,17 @@ fi
 
 syncthing &
 # wal -R &
-mullvad connect &
+# mullvad connect &
 unclutter &
 
-# Set up keyboard layouts and toggle option
+# # Set up keyboard layouts and toggle option
 
-setxkbmap -layout us,us -variant dvorak,colemak -option grp:alt_shift_toggle
-
-# Set up xkb options
 setxkbmap -option compose:menu
-setxkbmap -option ctrl:swapcaps
 
 # Set up monitor orientation and refresh rate
 xrandr --newmode "1600x900-60.00"  118.25  1600 1696 1856 2112  900 903 908 934 -hsync +vsync
 xrandr --addmode DP-2 1600x900-60.00
-xrandr --output DP-3 --primary --mode 2560x1440 --pos 0x0 --output DP-2 --mode 1600x900-60.00 --pos 2560x312
+xrandr --output DP-3 --primary --mode 2560x1440 --rate 144 --pos 0x0 --output DP-2 --mode 1600x900-60.00 --pos 2560x312
 xset s off -dpms
 
 # Start bspwm

@@ -9,6 +9,7 @@ map [normal] N scroll page-bottom
 map [normal] l search forward
 map [normal] L search backward
 map [normal] j toggle_page_mode
+map [normal] J cycle_first_column
 map [fullscreen] H navigate next
 map [fullscreen] T navigate previous
 map [index] h navigate_index down
