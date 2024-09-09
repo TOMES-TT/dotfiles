@@ -10,24 +10,26 @@ The color scheme is a variation on [raild](https://github.com/dkeg/crayolo/blob/
 
 - [alacritty](https://github.com/baskerville/bspwm): feature-rich terminal emulator
 
-- [fish](https://github.com/fish-shell/fish-shell): shell with cool features
-
 - [bpswm](https://github.com/baskerville/bspwm): lightweight tiling window manager
-
-- [polybar](https://github.com/polybar/polybar): status bar
-
-- [rofi](https://github.com/davatorium/rofi): application launcher
-
-- [ranger](https://github.com/ranger/ranger): TUI file manager
-
-- [helix](https://github.com/helix-editor/helix): postmodern text editor based on vim
-
-- [mpv](https://mpv.io/): lightweight media viewer
 
 - [feh](https://github.com/derf/feh): image viewer
 
+- [fish](https://github.com/fish-shell/fish-shell): shell with cool features
+
+- [helix](https://github.com/helix-editor/helix): postmodern text editor based on vim
+
+- [kanata](https://github.com/jtroo/kanata): keyboard remapping software inspired by qmk
+
+- [lf](https://github.com/gokcehan/lf): lightweight, configurable terminal file manager
+
+- [mpv](https://mpv.io/): lightweight media viewer
+
+- [picom](https://github.com/yshui/picom): display compositor for terminal transparency and blur
+
+- [polybar](https://github.com/polybar/polybar): status bar
+
 - [pywal](https://github.com/dylanaraps/pywal): set the colorscheme of a ton of different programs using an integrated theme 
 
-- [zathura](https://github.com/pwmt/zathura): pdf viewer
+- [rofi](https://github.com/davatorium/rofi): application launcher
 
-- [BetterDiscord](https://github.com/BetterDiscord/BetterDiscord): custom discord client; I mainly use it for theming with my custom theme
+- [zathura](https://github.com/pwmt/zathura): pdf viewer
