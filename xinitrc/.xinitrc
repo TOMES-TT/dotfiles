@@ -30,6 +30,11 @@ export VISUAL=helix
 export EDITOR="$VISUAL"
 export TRASH_D_DIR="$HOME/.trash"
 
+export GTK_IM_MODULE="fcitx"
+export QT_IM_MODULE="fcitx"
+export SDL_IM_MODULE="fcitx"
+export XMODIFIERS="@im=fcitx"
+
 # start some nice programs
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
@@ -39,10 +44,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-syncthing &
+pgrep -x syncthing > /dev/null || syncthing &
 # wal -R &
 # mullvad connect &
 unclutter &
+fcitx -d &
 
 # # Set up keyboard layouts and toggle option
 
