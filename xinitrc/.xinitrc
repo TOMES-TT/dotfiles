@@ -57,7 +57,8 @@ setxkbmap -option compose:menu
 # Set up monitor orientation and refresh rate
 xrandr --newmode "1600x900-60.00"  118.25  1600 1696 1856 2112  900 903 908 934 -hsync +vsync
 xrandr --addmode DP-2 1600x900-60.00
-xrandr --output DP-3 --primary --mode 2560x1440 --rate 144 --pos 0x0 --output DP-2 --mode 1600x900-60.00 --pos 2560x312
+# xrandr --output DP-3 --primary --mode 2560x1440 --rate 144 --pos 0x0 --output DP-2 --mode 1600x900-60.00 --pos 2560x312 --output HDMI-1 --mode 1920x1080 --left-of DP-3
+xrandr --output DP-1 --off --output DP-2 --mode 1600x900-60.00 --pos 4480x742 --rotate normal --output DP-3 --primary --mode 2560x1440 --pos 1920x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x944 --rotate normal
 xset s off -dpms
 
 # Start bspwm
