@@ -46,7 +46,7 @@ fi
 
 pgrep -x syncthing > /dev/null || syncthing &
 # wal -R &
-mullvad connect &
+# mullvad connect &
 unclutter &
 fcitx -d &
 

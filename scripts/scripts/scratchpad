@@ -1,5 +1,7 @@
 #!/usr/bin/env fish
 
+#copies highlighted text, opens it in helix for editing, and puts it on the clipboard when you're done
+
 set -l clipBuffer (mktemp)
 xclip -o -selection primary >"$clipBuffer"
 bspc rule -a cb-ed --one-shot state=floating && alacritty --class cb-ed -e helix $clipBuffer
