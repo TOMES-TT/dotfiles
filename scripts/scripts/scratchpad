@@ -1,0 +1,6 @@
+#!/usr/bin/env fish
+
+set -l clipBuffer (mktemp)
+xclip -o -selection primary >"$clipBuffer"
+bspc rule -a cb-ed --one-shot state=floating && alacritty --class cb-ed -e helix $clipBuffer
+string trim --right --chars \n (cat $clipBuffer) | xclip -i -selection clipboard

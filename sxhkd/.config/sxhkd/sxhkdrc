@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 #
 # wm independent hotkeys
 #
@@ -26,6 +28,10 @@ super + alt + b
 # copies the image to the clipboard and saves it to the screenshots directory using a filename with the date
 super + shift + o; {k,o,p}
 	maim {-w root -g 2560x1440+0+0,-i $(xdotool getactivewindow),-s} | xclip -selection clipboard -t image/png && xclip -selection clipboard -t image/png -o > ~/pictures/screenshots/$(date +%Y-%m-%d_%H:%M.png)
+
+# copy primary selection to a helix window for editing, then put it on the clipboard
+super + e
+	scratchpad
 
 # take a screenshot of a screen region using maim, perform OCR on it with tesseract, and pass the resulting text to the clipboard (currently in portuguese for Carmine reasons)
 super + shift + o; r

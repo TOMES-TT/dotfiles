@@ -22,3 +22,9 @@ indent = { tab-width = 4, unit = "\t"}
 [[language]]
 name = "common-lisp"
 indent = { tab-width = 4, unit = "\t"}
+[[language]]
+name = "lua"
+indent = { tab-width = 4, unit = "\t"}
+[[language]]
+name = "hocon"
+indent = { tab-width = 4, unit = "\t"}

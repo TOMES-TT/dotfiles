@@ -6,6 +6,7 @@
 )
 (defalias 
   ctsp (tap-hold 200 150 spc lctl)
+  asp (tap-hold 200 100 spc ralt)   
   gru (tap-hold 200 200 grv @util)
   12ut (tap-hold 200 200 f12 @util)
   f9n (tap-hold 200 200 f9 @hnm)
@@ -30,7 +31,7 @@
   tab  '    ,    .    p    y    f    g    c    r    l    /    =    \ 		del end pgdn
   lctl a    o    e    u    i    d    h    t    n    s    -    ret  
   lsft ;    q    j    k    x    b    m    w    v    z    rsft					 up
-  caps lmet lalt           spc            ralt comp @ctsp					left down right
+  caps lmet lalt           spc            comp @asp rctl					left down right
 )
 
 (deflayer qwerty
@@ -62,9 +63,9 @@
 
 (deflayer numpad
   _    @dvk _    _    _    _    _    _    _    _    _    _    _             @dvk _    _ 
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _    	_   _   _   
-  _    _    7    8    9    _    _    9    8    7    _    _    _    _ 		_   _   _   
-  _    _    4    5    6    _    _    6    5    4    _    _    _    
-  _    _    1    2    3    _    _    3    2    1    _    _   					 _ 
+  _    -    kp*  /    _    _    _    _    /    kp*  -    _    _    _    	_   _   _   
+  _    +    7    8    9    _    _    9    8    7    +    _    _    _ 		_   _   _   
+  _    +    4    5    6    _    _    6    5    4    +    _    _    
+  bspc ret  1    2    3    _    _    3    2    1    ret  _   					 _ 
   _    _    _              0              _    _    _    					_    _    _    
 )

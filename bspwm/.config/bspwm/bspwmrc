@@ -8,7 +8,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 fish $HOME/scripts/polybar-multimon.fish &
 
-bspc rule -a KeePassXC --one-shot desktop=^5 && keepassxc &
+bspc rule -a KeePassXC --one-shot desktop=10 && keepassxc &
 
 wal -R &
 
@@ -29,9 +29,9 @@ bspc config presel_feedback_color "$color1"
 
 # 3 monitors
 bspc monitor DP-3	-d 1 2 3 4 5
-bspc monitor DP-2	-d 6 7 8 9 10
-bspc monitor HDMI-1 -d 11 12 13 14 15
-bspc wm -O DP-3 DP-2 HDMI-1
+bspc monitor DP-2	-d 11 12 13 14 15
+bspc monitor HDMI-1 -d 6 7 8 9 10
+bspc wm -O DP-3 HDMI-1 DP-2
 
 # 2 monitors
 # bspc monitor DP-3	-d 1 2 3 4 5
@@ -51,7 +51,7 @@ bspc config pointer_follows_monitor	true
 
 bspc config ignore_ewmh_focus		true
 
-bspc rule -a steam desktop="^4"
-bspc rule -a discord desktop="^6" focus=off
+bspc rule -a steam desktop=13
+bspc rule -a discord desktop=11 focus=off
 bspc rule -a "RuneLite Launcher" state=floating
-bspc rule -a "Spotify" desktop="^9" focus=off
+bspc rule -a "Spotify" desktop=14 focus=off
