@@ -18,7 +18,7 @@ if status is-interactive
     alias tr="trash"
 
     # commands
-    alias he="helix"
+    alias hx="helix"
     alias nc="mpc update && ncmpcpp"
     alias neo="neo -C $HOME/.config/neo/colors"
 
@@ -30,12 +30,12 @@ if status is-interactive
     # config files
     alias bs="helix ~/.config/bspwm/bspwmrc"
     alias sx="helix ~/.config/sxhkd/sxhkdrc"
-    alias hec="helix ~/.config/helix/config.toml"
+    alias hxc="helix ~/.config/helix/config.toml"
     alias fcf="helix ~/.config/fish/config.fish"
     alias xn="helix ~/.xinitrc"
     alias rn="ranger"
-    alias pbc="he ~/.config/polybar/config.ini"
-    alias ala="he ~/.config/alacritty/alacritty.toml"
+    alias pbc="helix ~/.config/polybar/config.ini"
+    alias ala="helix ~/.config/alacritty/alacritty.toml"
 
     #git management
     alias github="cd $HOME/dotfiles/; stow */ ; git add ./* ; git commit; git push"
