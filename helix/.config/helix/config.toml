@@ -1,4 +1,11 @@
-theme = "base16_terminal"
+theme = "base16_transparent_modified"
+
+[editor]
+
+shell = ["fish", "-c"]
+line-number = "relative"
+bufferline = "multiple"
+color-modes = true
 
 [editor.cursor-shape]
 normal = "block"
@@ -10,6 +17,7 @@ enable = true
 
 [editor.statusline]
 right = ["diagnostics", "selections", "register", "position", "primary-selection-length", "file-encoding"]
+
 [keys.normal]
 d = "move_char_left"
 D = "swap_view_left"
@@ -43,9 +51,6 @@ L = "search_prev"
 [keys.normal.g]
 u = "goto_line_start"
 
-[keys.select.g]
-u = "goto_line_start"
-
 [keys.select]
 d = "move_char_left"
 D = "swap_view_left"
@@ -62,6 +67,9 @@ K = "till_prev_char"
 "C-c" = "normal_mode"
 l = "search_next"
 L = "search_prev"
+
+[keys.select.g]
+u = "goto_line_start"
 
 [keys.insert]
 "C-c" = "normal_mode"

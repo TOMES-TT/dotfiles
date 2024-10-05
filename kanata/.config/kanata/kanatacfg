@@ -6,7 +6,7 @@
 )
 (defalias 
   ctsp (tap-hold 200 150 spc lctl)
-  asp (tap-hold 200 100 spc ralt)   
+  asp (tap-hold 500 100 spc ralt)   
   gru (tap-hold 200 200 grv @util)
   12ut (tap-hold 200 200 f12 @util)
   f9n (tap-hold 200 200 f9 @hnm)

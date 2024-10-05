@@ -18,7 +18,7 @@ super + Escape
 
 # launch lf
 super + r
-	alacritty -e lf
+	alacritty -e lf-wrap
 
 # launch browser
 super + alt + b

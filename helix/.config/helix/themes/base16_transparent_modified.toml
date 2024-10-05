@@ -1,0 +1,5 @@
+# Just a small hack to make selections not look weird when using a transparent terminal window
+
+inherits = "base16_transparent"
+
+"ui.selection" = {fg = "black", bg = "gray"} #fg is text, bg is selection
