@@ -37,27 +37,30 @@ map X !$f
 # map o &mimeopen $f
 # map O $mimeopen --ask $f
 
-set previewer ~/.config/lf/previewer
-set cleaner ~/.config/lf/cleaner
+# set previewer ~/.config/lf/previewer
+# set cleaner ~/.config/lf/cleaner
 
 # my mappings
 
 # move vim keys
 
-map d updir
-map h down
-map t up
-map n open
-map H push 5h
-map T push 5t
+map m updir
+map n down
+map e up
+map i open
+map N push 5n
+map E push 5e
 
-map j cut
 map k tag-toggle
 map l search-next
 map L search-prev
+map h mark-save
 
-map J trash
+map D %trash -ri "$f"
 
+map t $$EDITOR "$f"
+
+map c 
 
 # define a custom 'open' command
 # This command is called when current file is not a directory. You may want to
@@ -111,7 +114,7 @@ map a :push %mkdir<space>
 
 # move current file or selected files to trash folder
 # (also see 'man mv' for backup/overwrite options)
-cmd trash %set -f; mv $fx ~/.trash
+# cmd trash %set -f; mv $fx ~/.trash
 
 # define a custom 'delete' command
 # cmd delete ${{

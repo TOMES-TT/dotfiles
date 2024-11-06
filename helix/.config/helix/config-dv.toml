@@ -1,0 +1,90 @@
+theme = "base16_transparent_modified"
+
+[editor]
+
+shell = ["fish", "-c"]
+line-number = "relative"
+bufferline = "multiple"
+color-modes = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "block"
+select = "underline"
+
+[editor.soft-wrap]
+enable = true
+
+[editor.statusline]
+right = ["diagnostics", "selections", "register", "position", "primary-selection-length", "file-encoding"]
+
+[keys.normal]
+d = "move_char_left"
+D = "swap_view_left"
+h = "move_visual_line_down"
+H = "join_selections"
+t = "move_visual_line_up"
+T = "keep_selections"
+n = "move_char_right"
+N = "swap_view_right"
+j = "delete_selection"
+J = "workspace_diagnostics_picker"
+k = "find_till_char"
+K = "till_prev_char"
+l = "search_next"
+L = "search_prev"
+
+[keys.normal.z]
+h = "scroll_down"
+t = "scroll_up"
+l = "search_next"
+L = "search_prev"
+o = "align_view_top"
+
+[keys.normal.Z]
+h = "scroll_down"
+t = "scroll_up"
+l = "search_next"
+L = "search_prev"
+o = "align_view_top"
+
+[keys.normal.g]
+u = "goto_line_start"
+
+[keys.normal.C-w]
+d = "jump_view_left"
+C-d = "jump_view_left"
+h = "jump_view_down"
+C-h = "jump_view_down"
+t = "jump_view_up"
+C-t = "jump_view_up"
+n = "jump_view_right"
+C-n = "jump_view_right"
+D = "swap_view_left"
+H = "swap_view_down"
+T = "swap_view_up"
+N = "swap_view_right"
+
+[keys.select]
+d = "move_char_left"
+D = "swap_view_left"
+h = "move_visual_line_down"
+H = "join_selections"
+t = "move_visual_line_up"
+T = "keep_selections"
+n = "move_char_right"
+N = "swap_view_right"
+j = "delete_selection"
+J = "workspace_diagnostics_picker"
+k = "find_till_char"
+K = "till_prev_char"
+"C-c" = "normal_mode"
+l = "search_next"
+L = "search_prev"
+
+[keys.select.g]
+u = "goto_line_start"
+
+[keys.insert]
+"C-c" = "normal_mode"
+# "C-Backspace" = "delete_word_backward"

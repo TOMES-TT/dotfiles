@@ -29,8 +29,8 @@ super + alt + b
 super + shift + o; {k,o,p}
 	maim {-w root -g 2560x1440+0+0,-i $(xdotool getactivewindow),-s} | xclip -selection clipboard -t image/png && xclip -selection clipboard -t image/png -o > ~/pictures/screenshots/$(date +%Y-%m-%d_%H:%M.png)
 
-# copy primary selection to a helix window for editing, then put it on the clipboard
-super + e
+# copy clipboard to a helix window for editing, then put it back on the clipboard
+super + d
 	scratchpad
 
 # take a screenshot of a screen region using maim, perform OCR on it with tesseract, and pass the resulting text to the clipboard (currently in portuguese for Carmine reasons)
@@ -40,10 +40,6 @@ super + shift + o; r
 # speak the clipboard with espeak using bookreport
 super + shift + s;{s,k}
 	{bookreport --clipboard,killall -q espeak}
-
-# toggle the keymap between dvorak and colemak
-super + alt + @space
-	setxkbmap -query | grep -q 'dvorak' && setxkbmap -variant colemak || setxkbmap -variant dvorak
 
 #
 # bspwm hotkeys
@@ -58,7 +54,7 @@ super + {_,shift + }w
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
-super + m
+super + h
 	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
@@ -74,11 +70,11 @@ super + g
 #
 
 # set the window state
-super + {i,shift + i,s,f}
+super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags
-super + ctrl + {m,v,x,y,z}
+super + ctrl + {h,v,x,y,z}
 	bspc node -g {marked,hidden,locked,sticky,private}
 
 # unhide all hidden windows
@@ -95,7 +91,7 @@ super + l
 #
 
 # focus the node in the given direction
-super + {d,h,t,n}
+super + {m,n,e,i}
 	bspc node -f {west,south,north,east}
 
 # focus the node for the given path jump
@@ -115,21 +111,23 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-super + {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+# super + {o,i}
+	# bspc wm -h off; \
+	# bspc node {older,newer} -f; \
+	# bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} {1-9,10}
+super + {_,shift + }{1,2,3,4,5,7,8,9,0,minus}
+	bspc {desktop -f,node -d} {1,2,3,4,5,6,7,8,9,10}
 #super + alt + {6,7,8,9,0}
 #	bspc {desktop -f,node -d} {11,12,13,14,15}
-super + alt + {_,shift + }{6,7,8,9,0}
+super + alt + {_,shift + }{7,8,9,0,minus}
 	bspc {desktop -f,node -d} {11,12,13,14,15}
+super + alt + -
+	bspc desktop -f 15
 
 # swap the selected node with the node in the given direction
-super + alt + {d,h,t,n}
+super + alt + {m,n,e,i}
 	bspc node -s {west,south,north,east}
 
 #
@@ -137,7 +135,7 @@ super + alt + {d,h,t,n}
 #
 
 # preselect the direction
-super + ctrl + shift + {d,h,t,n}
+super + ctrl + shift + {m,n,e,i}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
@@ -157,15 +155,15 @@ super + ctrl + shift + space
 #
 
 # expand a window by moving one of its side outward
-super + ctrl + {d,h,t,n}
+super + ctrl + {m,n,e,i}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super +  shift + {d,h,t,n}
+super +  shift + {m,n,e,i}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
-super + {Left,Down,Up,Right}
+super + {m,n,e,i}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # rotate currently selected node

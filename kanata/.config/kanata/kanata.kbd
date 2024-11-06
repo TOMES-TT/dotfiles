@@ -1,0 +1,117 @@
+
+(defcfg)
+;; aliases
+
+;; layer aliases first
+(defalias 
+  util (layer-while-held utility)
+  entl (layer-while-held enter-layer)
+  arr (layer-while-held arrow-layer)
+)
+
+(defalias 
+
+;; tap-hold mods for gaming
+ctsp (tap-hold 200 150 spc lctl)
+asp (tap-hold 500 100 spc ralt)   
+
+;; layer tap-holds
+esu (tap-hold 200 200 esc @util)
+12ut (tap-hold 200 200 f12 @util)
+rly (tap-hold 200 200 ret @entl)
+uta (tap-hold 200 200 lalt @arrl)
+zst (tap-hold 200 200 z lsft)
+
+;; home row mods
+az (tap-hold 200 200 z lalt)
+mx (tap-hold 200 200 x lmet)
+cc (tap-hold 200 200 c lctl)
+sh (tap-hold 200 200 h lsft)
+sd (tap-hold 200 200 d lsft)
+c, (tap-hold 200 200 , lctl)
+m. (tap-hold 200 200 . lmet)
+ao (tap-hold 200 200 o lalt)
+
+;; layer switching
+col (layer-switch colemak)
+qwe (layer-switch qwerty)
+gam (layer-switch gaming)
+;; up1 (layer-switch upper1)
+
+;; action aliases
+cw (caps-word 2000)    
+)
+;; Define current keyboard layout (currently US qwerty TKL)
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           prnt slck brk
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc 	ins  home pgup
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \ 		del  end  pgdn
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret  
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft					 up
+  lctl lmet lalt           spc            ralt comp rctl					left down right
+)
+
+;; Define default layer (currently ANSI Colemak-DH Wide Mod)
+
+(deflayer colemak
+  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           prnt slck brk
+  grv  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins  home pgup
+  tab  q    w    f    p    b    [    j    l    u    y    ;    '    \ 		del  end  pgdn
+  lctl a    r    s    t    g    ]    m    n    e    i    o    @rly  
+  @az  @mx  @cc  @sd  v    v    /    k    @sh  @c,  @m.  ralt					 up
+  @cw  lmet @arr           spc            comp @asp rctl					left down right
+)
+
+(deflayer arrow-layer
+  _    _    _    _    _    _    _    _    _    _    _    _    _             _    _    _  
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    	_    _    _   
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _ 		_    _    _   
+  _    _    _    _    _    _    _    left down up   rght _    _    
+  _    _    _    _    _    _    _    _    _    _    _    _   					 _ 
+  _    _    _              _              _    _    _   					_    _    _    
+)
+
+(deflayer enter-layer
+  _    _    _    _    _    _    _    _    _    _    _    _    _             _    _    _  
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    	_    _    _   
+  _    min  7    8    9    _    _    _    _    [    ]    eql  _    _ 		_    _    _   
+  bspc +    4    5    6    _    _    _    _    S-9  S-0  min  _    
+  ret  1    2    3    rsft _    _    _    _    _    _    _   					 _ 
+  _    _    _              _              _    _    _   					_    _    _    
+)
+
+(deflayer qwerty
+  @esu f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 prtsc slck brk
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc 	ins home pgup
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \ 		del end pgdn
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret  
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft					 up
+  lctl lmet lalt           spc            ralt comp rctl					left down right
+)
+
+(deflayer gaming
+  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prtsc   slck   brk
+  grv  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins home pgup
+  tab  q    w    f    p    b    [    j    l    u    y    ;    '    \ 		del end pgdn
+  lctl a    r    s    t    g    ]    m    n    e    i    o    ret  
+  @zst x    c    d    v    v    /    k    h    ,    .    rsft					 up
+  @cw  lmet lalt           spc            comp @asp rctl					left down right
+)
+
+(deflayer utility
+  _    @col @qwe @gam lrld @col _    _    _    _    _    _    _             _   _   _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    	_   _   _   
+  _    _    _    _    _    _    _    home _    _    _    _    _    _ 		_   _   _   
+  _    _    _    _    _    _    _    end  _    _    _    _    _    
+  _    _    _    _    _    _    _    _    _    _    _    _   					 _ 
+  _    _    _              _              _    _    _    					_    _    _    
+)
+				
+(deflayer blank-template
+  _    _    _    _    _    _    _    _    _    _    _    _    _             _    _    _  
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    	_    _    _   
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _ 		_    _    _   
+  _    _    _    _    _    _    _    _    _    _    _    _    _    
+  _    _    _    _    _    _    _    _    _    _    _    _   					 _ 
+  _    _    _              _              _    _    _   					_    _    _    
+)

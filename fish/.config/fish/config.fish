@@ -34,6 +34,9 @@ alias lf="exec /usr/local/bin/lf-wrap"
 alias mvd="mullvad disconnect"
 alias mvc="mullvad connect"
 alias mvs="mullvad status"
+alias tsu="tailscale up"
+alias tsd="tailscale down"
+alias tss="tailscale status"
 
 # config files
 alias bs="helix ~/.config/bspwm/bspwmrc"

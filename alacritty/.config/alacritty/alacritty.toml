@@ -1,6 +1,6 @@
-shell = "/usr/bin/fish"
+terminal.shell = "/usr/bin/fish"
 
-import = ["~/.cache/wal/colors-alacritty.toml"]
+general.import = ["~/.cache/wal/colors-alacritty.toml"]
 
 [window]
 padding = { x = 10, y = 10}

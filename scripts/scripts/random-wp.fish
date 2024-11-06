@@ -1,2 +1,7 @@
 #!/usr/bin/env fish
-feh --bg-fill (random choice $HOME/pictures/wallpapers/random/*.jpg)
+argparse w/wal -- $argv
+if set -ql _flag_w
+    wal -i (random choice $argv)
+else
+    feh --bg-fill (random choice $argv)
+end
