@@ -34,8 +34,10 @@ l = "search_next"
 L = "search_prev"
 k = "move_next_word_end"
 K = "move_next_long_word_end"
-j = "insert_mode"
-J = "insert_at_line_start"
+j = "yank"
+J = "yank_main_selection_to_clipboard"
+y = "insert_mode"
+Y = "insert_at_line_start"
 
 [keys.normal.z]
 n = "scroll_down"
@@ -59,6 +61,13 @@ d = "surround_delete"
 a = "select_textobject_around"
 i = "select_textobject_inner"
 
+[keys.normal.g]
+m = "goto_line_start"
+n = "move_line_down"
+e = "move_line_up"
+i = "goto_line_end"
+k = "goto_last_line"
+
 [keys.normal.C-w]
 m = "jump_view_left"
 C-m = "jump_view_left"
@@ -73,6 +82,11 @@ N = "swap_view_down"
 E = "swap_view_up"
 I = "swap_view_right"
 
+[keys.normal.space]
+j = "yank_to_clipboard"
+J = "yank_main_selection_to_clipboard"
+y = "jumplist_picker"
+
 [keys.select]
 m = "move_char_left"
 M = "swap_view_left"
@@ -84,13 +98,63 @@ i = "move_char_right"
 I = "swap_view_right"
 l = "search_next"
 L = "search_prev"
-k = "move_next_word_start"
+k = "move_next_word_end"
 K = "move_next_long_word_end"
-J = "insert_at_line_start"
-"C-space" = "normal_mode"
+j = "yank"
+J = "yank_main_selection_to_clipboard"
+y = "insert_mode"
+Y = "insert_at_line_start"
+"tab" = "normal_mode"
+
+[keys.select.z]
+n = "scroll_down"
+e = "scroll_up"
+l = "search_next"
+L = "search_prev"
+o = "align_view_top"
+
+[keys.select.Z]
+n = "scroll_down"
+e = "scroll_up"
+l = "search_next"
+L = "search_prev"
+o = "align_view_top"
+
+[keys.select.h]
+h = "match_brackets"
+s = "surround_add"
+r = "surround_replace"
+d = "surround_delete"
+a = "select_textobject_around"
+i = "select_textobject_inner"
 
 [keys.select.g]
+m = "goto_line_start"
+n = "move_line_down"
+e = "move_line_up"
+i = "goto_line_end"
+k = "goto_last_line"
+
+[keys.select.C-w]
+m = "jump_view_left"
+C-m = "jump_view_left"
+n = "jump_view_down"
+C-n = "jump_view_down"
+e = "jump_view_up"
+C-e = "jump_view_up"
+i = "jump_view_right"
+C-i = "jump_view_right"
+M = "swap_view_left"
+N = "swap_view_down"
+E = "swap_view_up"
+I = "swap_view_right"
+
+[keys.select.space]
+j = "yank_to_clipboard"
+J = "yank_main_selection_to_clipboard"
+y = "jumplist_picker"
 
 [keys.insert]
 "C-space" = "normal_mode"
+"tab" = "normal_mode"
 # "C-Backspace" = "delete_word_backward"

@@ -18,16 +18,15 @@ super + Escape
 
 # launch lf
 super + r
-	alacritty -e lf-wrap
+	alacritty -e lf
 
 # launch browser
 super + alt + b
-	firefox
+	librewolf
 
-# take a screenshot using maim, either of the current desktop, the active window, or a region;
-# copies the image to the clipboard and saves it to the screenshots directory using a filename with the date
-super + shift + o; {k,o,p}
-	maim {-w root -g 2560x1440+0+0,-i $(xdotool getactivewindow),-s} | xclip -selection clipboard -t image/png && xclip -selection clipboard -t image/png -o > ~/pictures/screenshots/$(date +%Y-%m-%d_%H:%M.png)
+# take a screenshot using flameshot
+super + shift + s
+	flameshot gui
 
 # copy clipboard to a helix window for editing, then put it back on the clipboard
 super + d

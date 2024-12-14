@@ -28,7 +28,14 @@ alias tr="trash"
 alias he="helix"
 alias nc="mpc update && ncmpcpp"
 alias neo="neo -C $HOME/.config/neo/colors"
-alias lf="exec /usr/local/bin/lf-wrap"
+# alias lf="exec /usr/local/bin/lf-wrap"
+alias ff="fastfetch"
+
+# pacman
+alias pm="pacman"
+alias spm="sudo pacman"
+alias pms="pacman -Ss"
+alias ps="sudo pacman -S"
 
 # vpn control
 alias mvd="mullvad disconnect"
