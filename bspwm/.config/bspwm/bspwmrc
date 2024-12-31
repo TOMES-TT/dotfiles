@@ -53,8 +53,9 @@ bspc config directional_focus_tightness	low
 
 bspc config ignore_ewmh_focus			true
 
-bspc rule -a "RuneLite Launcher" state=floating
+bspc rule -a float state=floating
 
+bspc rule -a "RuneLite Launcher" state=floating
 bspc rule -a discord desktop=6 focus=off
 bspc rule -a Element desktop=7 focus=off
 bspc rule -a steam desktop=4

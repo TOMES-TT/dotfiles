@@ -30,12 +30,14 @@ alias nc="mpc update && ncmpcpp"
 alias neo="neo -C $HOME/.config/neo/colors"
 # alias lf="exec /usr/local/bin/lf-wrap"
 alias ff="fastfetch"
+# alias --help="--help | less "
+# Dunno why this doesn't work but it's a cool idea
 
 # pacman
 alias pm="pacman"
 alias spm="sudo pacman"
 alias pms="pacman -Ss"
-alias ps="sudo pacman -S"
+alias spms="sudo pacman -S"
 
 # vpn control
 alias mvd="mullvad disconnect"

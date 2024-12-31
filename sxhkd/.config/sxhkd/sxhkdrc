@@ -5,8 +5,8 @@
 #
 
 # terminal emulator
-super + Return
-	alacritty
+super {_,shift + }+ Return
+	alacritty {_,--class float }
 
 # program launcher
 super + @space
@@ -17,8 +17,8 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # launch lf
-super + r
-	alacritty -e lf
+super {_,shift + }+ r
+	alacritty {_,--class float }-e lf
 
 # launch browser
 super + alt + b

@@ -104,7 +104,6 @@ j = "yank"
 J = "yank_main_selection_to_clipboard"
 y = "insert_mode"
 Y = "insert_at_line_start"
-"tab" = "normal_mode"
 
 [keys.select.z]
 n = "scroll_down"
@@ -156,5 +155,4 @@ y = "jumplist_picker"
 
 [keys.insert]
 "C-space" = "normal_mode"
-"tab" = "normal_mode"
 # "C-Backspace" = "delete_word_backward"

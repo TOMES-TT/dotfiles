@@ -38,6 +38,7 @@ shebangs = []
 roots = []
 auto-format = false
 language-servers = [ "scls" ]
+indent = { tab-width = 4, unit = "\t"}
 
 [[language]]
 name = "arst"
@@ -72,6 +73,7 @@ indent = { tab-width = 4, unit = "\t"}
 [editor.auto-pairs]
 '*' = '*'
 '[' = ']'
+language-servers = [ "slcs", "markdown-oxide"]
 
 [[language]]
 name = "common-lisp"
