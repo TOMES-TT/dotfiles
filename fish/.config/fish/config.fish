@@ -30,6 +30,8 @@ alias nc="mpc update && ncmpcpp"
 alias neo="neo -C $HOME/.config/neo/colors"
 # alias lf="exec /usr/local/bin/lf-wrap"
 alias ff="fastfetch"
+alias loop="pactl load-module module-loopback"
+alias unloop="pactl unload-module module-loopback"
 # alias --help="--help | less "
 # Dunno why this doesn't work but it's a cool idea
 

@@ -30,10 +30,10 @@ export VISUAL=helix
 export EDITOR="$VISUAL"
 export TRASH_D_DIR="$HOME/.trash"
 
-export GTK_IM_MODULE="fcitx"
-export QT_IM_MODULE="fcitx"
-export SDL_IM_MODULE="fcitx"
-export XMODIFIERS="@im=fcitx"
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 # start some nice programs
 
@@ -49,12 +49,13 @@ wal -R &
 unclutter &
 fcitx -d &
 
-# # Set up keyboard layouts and toggle option
+# Set up keyboard layouts and toggle option
 
 setxkbmap -option compose:menu
 
 # Set up monitor orientation and refresh rate
-xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 2560x1440 --pos 1920x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x1013 --rotate normal
+xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 2560x1093 --rotate normal
+# xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 2560x1440 --pos 1920x0 --rotate normal --output HDMI-A-0 --off
 xset s off -dpms
 
 # set sxhkd shell for performance

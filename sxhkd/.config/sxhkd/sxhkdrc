@@ -17,15 +17,15 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # launch lf
-super {_,shift + }+ r
+super {_,shift + } + q
 	alacritty {_,--class float }-e lf
 
 # launch browser
 super + alt + b
-	librewolf
+	zen-browser
 
 # take a screenshot using flameshot
-super + shift + s
+super + shift + r
 	flameshot gui
 
 # copy clipboard to a helix window for editing, then put it back on the clipboard
@@ -37,8 +37,11 @@ super + shift + o; r
 	maim -s | tesseract - - -l por | xclip -selection clipboard
 
 # speak the clipboard with espeak using bookreport
-super + shift + s;{s,k}
+super + shift + p;{s,k}
 	{bookreport --clipboard,killall -q espeak}
+
+# hide and unhide discord
+super + {}
 
 #
 # bspwm hotkeys
@@ -63,6 +66,10 @@ super + y
 # swap the current node and the biggest window
 super + g
 	bspc node -s biggest.window
+
+# send the focused node to the "above" layer
+super + ctrl + alt + l
+	bspc node -l above
 
 #
 # state/flags

@@ -155,4 +155,6 @@ y = "jumplist_picker"
 
 [keys.insert]
 "C-space" = "normal_mode"
+C-v = "record_macro"
+C-q = "replay_macro"
 # "C-Backspace" = "delete_word_backward"
