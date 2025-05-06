@@ -1,0 +1,4 @@
+[editor.whitespace]
+[editor.whitespace.render]
+tab = "all"
+newline = "all"

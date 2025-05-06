@@ -17,11 +17,12 @@ asp (tap-hold 500 100 f ralt)
 ea (tap-hold 200 150 e a)
 
 ;; layer tap-holds
-esu (tap-hold 200 200 esc @util)
+esu (tap-hold-press 200 200 esc @util)
 12ut (tap-hold 200 200 f12 @util)
 rly (tap-hold 200 200 ret @entl)
 zst (tap-hold 200 200 z lsft)
 spa (tap-hold 200 200 spc @arr)
+osp (tap-dance 200 (spc @arr))
 
 ;; home row mods
   aa (tap-hold-release 300 200 a lalt)
@@ -46,11 +47,15 @@ qwe (layer-switch qwerty)
 gam (layer-switch gaming)
 gas (layer-switch gaming-space)
 isr (layer-switch isrt )
+osr (layer-switch osrs )
 ;; up1 (layer-switch upper1)
 
 ;; action aliases
 cw (caps-word 2000)    
 oca (tap-hold 200 200 o @cw)
+
+;; testing
+tap (tap-dance 200 (spc a))
 )
 ;; Define current keyboard layout (currently US qwerty TKL)
 (defsrc
@@ -84,7 +89,7 @@ oca (tap-hold 200 200 o @cw)
 
 (deflayer arrow-layer
   _    _    _    _    _    _    _    _    _    _    _    _    _             _    _    _  
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _    	_    _    _   
+  _    _    @col @gam @osr _    _    _    _    _    _    _    _    _    	_    _    _   
   _    C-a  _    _    C-y  _    _    _    home del  _    end  _    _ 		_    _    _   
   _    _    _    _    _    _    _    left down up   rght _    _    
   _    C-z  C-x  C-c  C-v  _    _    _    pgdn pgup _    _   					 _ 
@@ -127,9 +132,18 @@ oca (tap-hold 200 200 o @cw)
   @cw  lmet lalt           spc            comp ralt spc  					left down right
 )
 
+(deflayer osrs
+  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prtsc   slck   brk
+  grv  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins home pgup
+  tab  f5   f1   f3   f2   b    [    j    l    u    y    ;    '    \ 		del end pgdn
+  lctl esc  f4   mlft mlft @tap ]    m    n    e    i    o    ret  
+  lsft x    c    d    v    z    /    k    h    ,    .    rsft					 up
+  @oca lmet lalt           @osp           r    rctl f   					left down right
+)
+
 (deflayer utility
   _    @col @qwe @gam lrld @isr _    lrld @col @qwe @gas @gam _             _   _   _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _    	_   _   _   
+  _    @osr _    _    _    _    _    _    _    _    _    _    _    _    	_   _   _   
   _    _    _    _    _    _    _    home _    _    _    _    _    _ 		_   _   _   
   _    _    _    _    _    _    _    end  _    _    _    _    _    
   _    _    _    _    _    _    _    _    _    _    _    _   					 _ 
