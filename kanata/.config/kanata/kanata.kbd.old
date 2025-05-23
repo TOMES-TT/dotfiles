@@ -1,4 +1,3 @@
-;; cool idea: tap-hold mod-tap ctrl and extra layer
 (defcfg)
 ;; aliases
 
@@ -22,7 +21,6 @@ esu (tap-hold-press 200 200 esc @util)
 rly (tap-hold 200 200 ret @entl)
 zst (tap-hold 200 200 z lsft)
 spa (tap-hold 200 200 spc @arr)
-osp (tap-dance 200 (spc @arr))
 ost (tap-dance 200 (tab (layer-switch colemak-osrs)))
 grc (tap-dance 200 (grv (layer-switch osrs)))
 
@@ -50,6 +48,8 @@ gam (layer-switch gaming)
 gas (layer-switch gaming-space)
 isr (layer-switch isrt )
 osr (layer-switch osrs )
+cqi (layer-switch colemak-qi;x)
+;; pin (layer-switch pinev4)
 ;; up1 (layer-switch upper1)
 
 ;; action aliases
@@ -61,7 +61,7 @@ tap (tap-dance 200 (spc a))
 )
 ;; Define current keyboard layout (currently US qwerty TKL)
 (defsrc
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           prnt slck brk
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12           prnt slck brk	mfwd mrgt
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc 	ins  home pgup
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \ 		del  end  pgdn
   caps a    s    d    f    g    h    j    k    l    ;    '    ret  
@@ -72,26 +72,53 @@ tap (tap-dance 200 (spc a))
 ;; Define default layer (currently ANSI Colemak-DH Wide Mod)
 
 (deflayer colemak
-  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prnt slck brk
+  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prnt slck brk	_ _
   grv  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins  home pgup
   tab  q    w    f    p    b    [    j    l    u    y    ;    '    @bks		del  end  pgdn
-  lctl @aa  @mr  @cs  @st  g    esc  m    @sn  @ce  @mi  @ao  @rly
+  lctl @aa  @mr  @cs  @st  g    ]    m    @sn  @ce  @mi  @ao  @rly
   lsft x    c    d    v    z    /    k    h    ,    .    rsft 					 up
   @cw  lmet lalt           @spa           comp @asp rctl					left down right
 )
 
+(deflayer gaming﻿
+  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prtsc   slck   brk	_	_
+  grv  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins home pgup
+  tab  q    w    f    p    b    [    j    l    u    y    ;    '    \ 		del end pgdn
+  lctl a    r    s    t    g    ]    m    n    e    i    o    ret  
+  lsft x    c    d    v    z    /    k    h    ,    .    rsft					 up
+  @cw  lmet lalt           spc            r    rctl f   					left down right
+)
+
 (deflayer isrt
-  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prnt slck brk
+  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prnt slck brk	_ _
   grv  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins  home pgup
-  tab  y    c    l    m    k    [    z    f    u    ,    '    ;    @bks		del  end  pgdn
-  lctl i    s    r    t    g    esc  p    n    e    a    o    @rly
-  lsft v    w    d    j    q    /    b    h    x    .    rsft 					 up
+  tab  y    l    c    m    k    [    z    f    ,    u    '    ;    @bks		del  end  pgdn
+  lctl i    r    s    t    w    ]    b    n    a    e    o    @rly
+  lsft j    g    d    v    q    /    p    h    x    .    rsft 					 up
   @cw  lmet lalt           @spa           comp @asp rctl					left down right
 )
 
+(deflayer colemak-qi;x
+  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prnt slck brk	_ _
+  grv  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins  home pgup
+  tab  ;    l    c    m    k    [    j    f    u    y    q    ;    @bks		del  end  pgdn
+  lctl a    r    s    t    g    ]    p    n    e    i    o    @rly
+  lsft x    w    d    v    z    /    b    h    ,    .    rsft 					 up
+  @cw  lmet lalt           @spa           comp @asp rctl					left down right
+)
+
+;; (deflayer pinev4
+;;   @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prnt slck brk	_ _
+;;   grv  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins  home pgup
+;;   tab  q    l    c    m    k    [    '    f    u    o    y    ;    @bks		del  end  pgdn
+;;   lctl n    r    s    t    w    ]    p    h    e    a    i    @rly
+;;   lsft x    z    g    v    j    /    b    d    ,    .    rsft 					 up
+;;   @cw  lmet lalt           @spa           comp @asp rctl					left down right
+;; )
+
 (deflayer arrow-layer
-  _    _    _    _    _    _    _    _    _    _    _    _    _             _    _    _  
-  _    _    @col @gam @osr _    _    _    _    _    _    _    _    _    	_    _    _   
+  _    _    _    _    _    _    _    _    _    _    _    _    _             _    _    _  _ _
+  _    _    @col _    @osr _    _    _    _    _    _    _    _    _    	_    _    _   
   _    C-a  _    _    C-y  _    _    _    home del  _    end  _    _ 		_    _    _   
   _    _    _    _    _    _    _    left down up   rght _    _    
   _    C-z  C-x  C-c  C-v  _    _    _    pgdn pgup _    _   					 _ 
@@ -99,7 +126,7 @@ tap (tap-dance 200 (spc a))
 )
 
 (deflayer enter-layer
-  _    _    _    _    _    _    _    _    _    _    _    _    _             _    _    _  
+  _    _    _    _    _    _    _    _    _    _    _    _    _             _    _    _  _ _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    	_    _    _   
   _    _    _    S-9  S-0  _    _    _    _    _    _    _    _    _ 		_    _    _   
   _    +    =    [    ]    _    _    _    _    _    _    _    _    
@@ -108,7 +135,7 @@ tap (tap-dance 200 (spc a))
 )
 
 (deflayer qwerty
-  @esu f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 @12ut                             prtsc slck brk
+  @esu f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 @12ut                             prtsc slck brk	_	_
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc 	ins home pgup
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \ 		del end pgdn
   caps a    s    d    f    g    h    j    k    l    ;    '    ret  
@@ -116,17 +143,9 @@ tap (tap-dance 200 (spc a))
   lctl lmet lalt           spc            ralt comp rctl					left down right
 )
 
-(deflayer gaming
-  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prtsc   slck   brk
-  grv  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins home pgup
-  tab  q    w    f    p    b    [    j    l    u    y    ;    '    \ 		del end pgdn
-  lctl a    r    s    t    g    ]    m    n    e    i    o    ret  
-  lsft x    c    d    v    z    /    k    h    ,    .    rsft					 up
-  @oca lmet lalt           spc            r    rctl f   					left down right
-)
 
 (deflayer gaming-space
-  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prtsc   slck   brk
+  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prtsc   slck   brk	_	_
   grv  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins home pgup
   tab  q    w    f    p    b    [    j    l    u    y    ;    '    \ 		del end pgdn
   lctl a    r    s    t    g    ]    m    n    e    i    o    ret  
@@ -135,26 +154,26 @@ tap (tap-dance 200 (spc a))
 )
 
 (deflayer osrs
-  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prtsc   slck   brk
-  grv  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins home pgup
-  tab  f5   f1   f3   f2   b    [    j    l    u    y    ;    '    \ 		del end pgdn
-  lctl esc  f4   mlft mlft @tap ]    m    n    e    i    o    ret  
+  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prtsc   slck   brk	_    _   
+  @grc  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins home pgup
+  @ost  f5   f3   f1   f2   b    [    j    l    u    y    ;    '    \ 		del end pgdn
+  lctl esc  f4   mlft mlft g    ]    m    n    e    i    o    ret  
   lsft x    c    d    v    z    /    k    h    ,    .    rsft					 up
-  @oca lmet lalt           @osp           r    rctl f   					left down right
+  @oca lmet lalt           spc            r    rctl f   					left down right
 )
 
 (deflayer colemak-osrs
-  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prnt slck brk
-  @grc 1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins  home pgup
-  @ost q    w    f    p    b    [    j    l    u    y    ;    '    @bks		del  end  pgdn
-  lctl @aa  @mr  @cs  @st  g    ]    m    @sn  @ce  @mi  @ao  @rly
+  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prnt slck brk	_ _
+  @grc  1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins  home pgup
+  @ost  q    w    f    p    b    [    j    l    u    y    ;    '    @bks		del  end  pgdn
+  lctl @aa  @mr  @cs  @st  g    esc  m    @sn  @ce  @mi  @ao  @rly
   lsft x    c    d    v    z    /    k    h    ,    .    rsft 					 up
-  @cw  lmet lalt           @spa           comp @asp rctl					left down right
+  @cw  lmet lalt           spc            comp @asp rctl					left down right
 )
 
 (deflayer utility
-  _    @col @qwe @gam lrld @isr _    lrld @col @qwe @gas @gam _             _   _   _
-  _    @osr _    _    _    _    _    _    _    _    _    _    _    _    	_   _   _   
+  _    @col @qwe _    lrld _    _    lrld @col @qwe @gas _    _             _   _   _	_ _
+  _    @osr @cqi @isr _    _    _    _    _    _    _    _    _    _    	_   _   _   
   _    _    _    _    _    _    _    home _    _    _    _    _    _ 		_   _   _   
   _    _    _    _    _    _    _    end  _    _    _    _    _    
   _    _    _    _    _    _    _    _    _    _    _    _   					 _ 
@@ -162,7 +181,7 @@ tap (tap-dance 200 (spc a))
 )
 				
 (deflayer blank-template
-  _    _    _    _    _    _    _    _    _    _    _    _    _             _    _    _  
+  _    _    _    _    _    _    _    _    _    _    _    _    _             _    _    _  	_	_
   _    _    _    _    _    _    _    _    _    _    _    _    _    _    	_    _    _   
   _    _    _    _    _    _    _    _    _    _    _    _    _    _ 		_    _    _   
   _    _    _    _    _    _    _    _    _    _    _    _    _    
