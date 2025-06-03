@@ -6,18 +6,19 @@ set update.nag true
 set update.nagwait 7
 set update.lastnaggedversion 1.14.0
 set update.checkintervalsecs 86400
-set theme midnight
-set hintchars neioarstqwfpxcdvzgmbj
+set theme shydactyl
+set hintchars neaoisrtyclmfudhgpqbvwx
+			  
 
 " Binds
-bind m scrollpx -50
-bind M back
+bind p scrollpx -50
+bind P back
 bind n scrollline 10
 bind N tabnext
 bind e scrollline -10
 bind E tabprev
-bind i scrollpx -50
-bind I forward
+bind a scrollpx 50
+bind A forward
 bind k gobble 1 markadd
 bind K gobble 1 quickmark
 bind ;x hint -F e => { const pos = tri.dom.getAbsoluteCentre(e); tri.excmds.exclaim_quiet("xdotool mousemove --sync " + window.devicePixelRatio * pos.x + " " + window.devicePixelRatio * pos.y + "; xdotool click 1")}

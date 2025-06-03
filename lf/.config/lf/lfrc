@@ -44,10 +44,10 @@ map X !$f
 
 # move vim keys
 
-map m updir
+map p updir
 map n down
 map e up
-map i open
+map a open
 map N push 5n
 map E push 5e
 
@@ -104,7 +104,7 @@ cmd bulk-rename ${{
 }}
 
 # mkdir command. See wiki if you want it to select created dir
-map a :push %mkdir<space>
+map c :push %mkdir<space>
 
 # define a custom 'rename' command without prompt for overwrite
 # cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
