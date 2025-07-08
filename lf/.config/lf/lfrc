@@ -54,8 +54,7 @@ map E push 5e
 map k tag-toggle
 map l search-next
 map L search-prev
-map h mark-save
-map j copy
+map h paste
 
 map D $trash $f
 
