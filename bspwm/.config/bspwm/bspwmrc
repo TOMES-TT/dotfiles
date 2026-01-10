@@ -2,8 +2,6 @@
 
 # launch programs that should restart when the wm restarts
 
-pgrep -x sxhkd > /dev/null || sxhkd &
-
 fish $HOME/scripts/random-wp.fish $HOME/pictures/wallpapers/random/* &
 
 fish $HOME/scripts/polybar-multimon.fish &
@@ -66,4 +64,6 @@ bspc rule -a Element desktop=7 focus=off
 bspc rule -a steam desktop=4
 bspc rule -a "Spotify" desktop=9 focus=off
 bspc rule -a "PNGTuberPlus" state=floating focus=off border=off rectangle=600x750+0+0
+bspc rule -a "*:*:AT Scores" state=floating
+bspc rule -a "*:*:WIZARD DUEL" state=floating rectangle=500x500+1000+1000
 # bspc rule -a "*:*:Picture-in-Picture" state=floating sticky=on rectangle=889x500+1600+850

@@ -4,6 +4,7 @@ if status is-interactive
     # get colors from the current pywal colorscheme
     source ~/.cache/wal/colors.fish
 
+    set -gx PATH $PATH ~/scripts
 
     #git management
     alias github="cd $HOME/dotfiles/; stow */ ; git add ./* ; git commit; git push"
@@ -47,7 +48,7 @@ alias mvc="mullvad connect"
 alias mvs="mullvad status"
 alias tsu="tailscale up"
 alias tsd="tailscale down"
-alias tss="tailscale status"
+alias tst="tailscale status"
 
 # config files
 alias bs="helix ~/.config/bspwm/bspwmrc"

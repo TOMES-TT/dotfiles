@@ -4,10 +4,13 @@ map [normal] e scroll up
 map [normal] i scroll right
 map [normal] N navigate next
 map [normal] E navigate previous
+map [normal] <Right>  navigate next
+map [normal] <Left> navigate previous
 map [normal] M scroll page-top
 map [normal] I scroll page-bottom
 map [normal] l search forward
 map [normal] L search backward
+# map [normal] R rotate rotate_ccw
 map [fullscreen] N navigate next
 map [fullscreen] E navigate previous
 map [index] n navigate_index down

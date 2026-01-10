@@ -16,16 +16,16 @@ super + @space
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# launch lf
+# launch ranger
 super {_,shift + } + q
-	alacritty {_,--class float }-e lf
+	alacritty {_,--class float }-e ranger
 
 # launch browser
 super + alt + b
 	zen-browser
 
 # take a screenshot using flameshot
-super + shift + r
+super + shift + s
 	flameshot gui
 
 # copy clipboard to a helix window for editing, then put it back on the clipboard
@@ -37,9 +37,12 @@ super + shift + o; r
 	maim -s | tesseract - - -l por | xclip -selection clipboard
 
 # speak the clipboard with espeak using bookreport
-super + shift + p;{s,k}
-	{bookreport --clipboard,killall -q espeak}
+super + grave
+	pgrep espeak || bookreport --clipboard
 
+# make espeak be quiet
+super + Tab
+	killall -q espeak
 # hide and unhide discord
 super + {}
 
@@ -115,9 +118,6 @@ super + bracket{left,right}
 # focus the last node/desktop
 alt + Tab
 	bspc node -f last.local
-
-super + {_,shift + } grave
-	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the older or newer node in the focus history
 # super + {o,i}

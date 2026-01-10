@@ -1,11 +1,12 @@
-theme = "base16_transparent_modified"
+theme = "ashen"
 
 [editor]
-
 shell = ["fish", "-c"]
 line-number = "relative"
 bufferline = "multiple"
 color-modes = true
+cursorline = true
+cursorcolumn = true
 
 [editor.cursor-shape]
 normal = "block"
@@ -66,11 +67,12 @@ o = "align_view_top"
 # i = "select_textobject_inner"
 
 [keys.normal.g]
-p = "goto_line_start"
 n = "move_line_down"
 e = "move_line_up"
 a = "goto_line_end"
 k = "goto_last_line"
+x = "goto_next_buffer"
+
 
 [keys.normal.C-w]
 p = "jump_view_left"
@@ -87,6 +89,8 @@ E = "swap_view_up"
 A = "swap_view_right"
 
 [keys.normal.space]
+h = "paste_clipboard_after"
+H = "paste_clipboard_before"
 # j = "yank_to_clipboard"
 # J = "yank_main_selection_to_clipboard"
 # y = "jumplist_picker"
@@ -104,10 +108,10 @@ l = "search_next"
 L = "search_prev"
 k = "move_next_word_end"
 K = "move_next_long_word_end"
-j = "yank"
-J = "yank_main_selection_to_clipboard"
-y = "insert_mode"
-Y = "insert_at_line_start"
+j = "append_mode"
+J = "insert_at_line_end"
+h = "paste_after"
+H = "paste_before"
 
 [keys.select.z]
 n = "scroll_down"
@@ -122,14 +126,6 @@ e = "scroll_up"
 l = "search_next"
 L = "search_prev"
 o = "align_view_top"
-
-[keys.select.h]
-h = "match_brackets"
-s = "surround_add"
-r = "surround_replace"
-d = "surround_delete"
-a = "select_textobject_around"
-i = "select_textobject_inner"
 
 [keys.select.g]
 p = "goto_line_start"
@@ -155,7 +151,6 @@ A = "swap_view_right"
 [keys.select.space]
 j = "yank_to_clipboard"
 J = "yank_main_selection_to_clipboard"
-y = "jumplist_picker"
 
 [keys.insert]
 "C-space" = "normal_mode"

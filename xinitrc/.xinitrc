@@ -48,13 +48,15 @@ pgrep -x syncthing > /dev/null || syncthing &
 wal -R &
 unclutter &
 fcitx -d &
+tailscale up &
+pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Set up keyboard layouts and toggle option
 
 setxkbmap -option compose:menu
 
 # Set up monitor orientation and refresh rate
-xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 2560x1093 --rotate normal
+# xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 2560x1093 --rotate normal
 # xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 2560x1440 --pos 1920x0 --rotate normal --output HDMI-A-0 --off
 xset s off -dpms
 

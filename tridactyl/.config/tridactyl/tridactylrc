@@ -589,7 +589,6 @@ bind Qa fillcmdline tabopen !arch
 bind qr fillcmdline open !aur
 bind Qr fillcmdline tabopen !aur
 bind Qj fillcmdline tabopen !jisho
-bind jj clipboard yank
 unbind @
 bind Qu fillcmdline tabopen !ug
 
