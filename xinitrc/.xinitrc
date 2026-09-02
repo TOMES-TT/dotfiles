@@ -56,9 +56,10 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 setxkbmap -option compose:menu
 
 # Set up monitor orientation and refresh rate
-# xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 2560x1093 --rotate normal
+xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 2560x1440 --pos 0x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 2560x1128 --rotate normal
 # xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --mode 2560x1440 --pos 1920x0 --rotate normal --output HDMI-A-0 --off
-xset s off -dpms
+xset s 3600 3600
+xset -dpms
 
 # set sxhkd shell for performance
 

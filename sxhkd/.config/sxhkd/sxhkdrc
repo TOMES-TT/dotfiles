@@ -6,7 +6,7 @@
 
 # terminal emulator
 super {_,shift + }+ Return
-	alacritty {_,--class float }
+	alacritty {_,--class float }-e tmux new
 
 # program launcher
 super + @space
@@ -18,7 +18,7 @@ super + Escape
 
 # launch ranger
 super {_,shift + } + q
-	alacritty {_,--class float }-e ranger
+	alacritty {_,--class float }-e tmux new -- ranger
 
 # launch browser
 super + alt + b
@@ -37,7 +37,7 @@ super + shift + o; r
 	maim -s | tesseract - - -l por | xclip -selection clipboard
 
 # speak the clipboard with espeak using bookreport
-super + grave
+super + alt + k
 	pgrep espeak || bookreport --clipboard
 
 # make espeak be quiet
@@ -59,6 +59,8 @@ super + {_,shift + }w
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
+super + j
+	bspc desktop -l next
 super + h
 	bspc desktop -l next
 
@@ -86,12 +88,16 @@ super + {t,shift + t,s,f}
 super + ctrl + {h,v,x,y,z}
 	bspc node -g {marked,hidden,locked,sticky,private}
 
+# special hidden flag hotkey because she's useful
+super + v
+	bspc node -g hidden
+
 # unhide all hidden windows
-super + u 
+super + l 
 	bspc node any.hidden.local -g hidden
 
 # hide the focused node, and swap it with the most recently hidden node on the same desktop
-super + l
+super + u
 	bspc node any.hidden.local -g hidden=off && bspc node -g hidden
 	
 

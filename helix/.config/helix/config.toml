@@ -1,4 +1,4 @@
-theme = "ashen"
+theme = "base16_transparent_modified"
 
 [editor]
 shell = ["fish", "-c"]
@@ -6,7 +6,7 @@ line-number = "relative"
 bufferline = "multiple"
 color-modes = true
 cursorline = true
-cursorcolumn = true
+cursorcolumn = false
 
 [editor.cursor-shape]
 normal = "block"

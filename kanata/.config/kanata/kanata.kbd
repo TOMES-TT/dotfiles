@@ -70,6 +70,7 @@ sc2 (layer-switch starcraft )
 cw (caps-word 2000)    
 cwa (tap-dance 200 (caps (caps-word 2000)))
 cwb (tap-dance 200 ((caps-word 2000) caps))
+cwt (caps-word 2000)
 oca (tap-hold 200 200 o @cw)
 
 ;; testing
@@ -100,6 +101,17 @@ tap (tap-dance 200 (spc a))
   mwu  mwd  mwd  mwu 
 )
 
+(deflayer osrs
+  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prtsc   slck   brk
+  @grc 1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins home pgup
+  @ost f5   f3   f1   f2   ins  [    z    f    u    ,    ;    '    @bks		del  end  pgdn
+  lctl esc  mlft f4   mlft g    ]    p    n    e    a    o    ret  
+  lsft v    w    d    j    q    /    b    h    x    .    rsft 					 up
+  @oca lmet lalt           spc            r    rctl f   					left down right
+
+  mwu  mwd  mwd  mwu 
+)
+
 (deflayer isrt-osrs
   @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prnt slck brk
   @grc 1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins  home pgup
@@ -111,16 +123,6 @@ tap (tap-dance 200 (spc a))
   mwu  mwd  mwd  mwu 
 )
 
-(deflayer osrs
-  @esu f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  @12ut         prtsc   slck   brk
-  @grc 1    2    3    4    5    6    =    7    8    9    0    -    bspc 	ins home pgup
-  @ost f5   f3   f1   f2   k    [    z    f    u    ,    ;    '    @bks		del  end  pgdn
-  lctl esc  f4   mlft mlft g    ]    p    n    e    a    o    ret  
-  lsft v    w    d    j    q    /    b    h    x    .    rsft 					 up
-  @oca lmet lalt           spc            r    rctl f   					left down right
-
-  mwu  mwd  mwd  mwu 
-)
 
 (deflayer qwerty
   @esu f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 @12ut                             prtsc slck brk
@@ -139,7 +141,7 @@ tap (tap-dance 200 (spc a))
   tab  y    c    l    m    k    [    z    f    u    ,    ;    '    @bks		del  end  pgdn
   lctl i    s    r    t    g    ]    p    n    e    a    o    ret
   lsft v    w    d    j    q    /    b    h    x    .    rsft 					 up
-  @cwa lmet lalt           spc            comp rctl y    					left down right
+  @cwa lmet lalt           spc            ralt rctl y    					left down right
 
   mwu  mwd  mwd  mwu 
 )

@@ -10,7 +10,7 @@ bspc rule -a KeePassXC --one-shot desktop=10 && keepassxc &
 
 wal -R &
 
-picom &
+# picom &
 
 wmname LG3D &
 
@@ -32,13 +32,16 @@ bspc config presel_feedback_color "$color9"
 # bspc monitor DP-2	-d 11 12 13 14 15
 # bspc monitor HDMI-1 -d 6 7 8 9 10
 # bspc wm -O DP-3 HDMI-1 DP-2
+# bspc rule -a discord desktop=6 focus=off
 
 # 2 monitors
 # bspc monitor DisplayPort-2	-d 1 2 3 4 5
 # bspc monitor HDMI-A-0		-d 6 7 8 9 10
+# bspc rule -a discord desktop=6 focus=off
 
 # 1 monitor
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+bspc rule -a discord desktop=3 focus=off
 
 # bspwm configs
 
@@ -58,7 +61,6 @@ bspc config ignore_ewmh_focus			true
 bspc rule -a float state=floating
 
 bspc rule -a "*:*:RuneLite Launcher" state=floating
-bspc rule -a discord desktop=6 focus=off
 bspc rule -a Revolt desktop=6 focus=off
 bspc rule -a Element desktop=7 focus=off
 bspc rule -a steam desktop=4
@@ -66,4 +68,6 @@ bspc rule -a "Spotify" desktop=9 focus=off
 bspc rule -a "PNGTuberPlus" state=floating focus=off border=off rectangle=600x750+0+0
 bspc rule -a "*:*:AT Scores" state=floating
 bspc rule -a "*:*:WIZARD DUEL" state=floating rectangle=500x500+1000+1000
+bspc rule -a "*:*:Bolt Launcher" desktop=4
+bspc rule -a "*:*:Prism Launcher" desktop=4
 # bspc rule -a "*:*:Picture-in-Picture" state=floating sticky=on rectangle=889x500+1600+850
