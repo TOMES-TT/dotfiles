@@ -48,7 +48,7 @@ pgrep -x syncthing > /dev/null || syncthing &
 wal -R &
 unclutter &
 fcitx -d &
-tailscale up &
+# tailscale up &
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # Set up keyboard layouts and toggle option
